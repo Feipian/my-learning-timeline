@@ -4,6 +4,7 @@ import styles from './Timeline.module.scss'
 import Link from 'next/link';
 
 import { QRCodeSVG } from 'qrcode.react';
+import ShowAd from './ShowAd';
 
 const TimeLine: React.FC = () => {
 
@@ -16,6 +17,7 @@ const TimeLine: React.FC = () => {
             </div>
 
             <h1 className={styles.timelineTitle}>My Learning Timeline</h1>
+            <ShowAd />
             <div className={styles.timeline}>
                 <div className={styles.timelineItem}>
                     <h2 className={styles.timelineItemTitle}>Kindergarten</h2>
@@ -64,6 +66,7 @@ const TimeLine: React.FC = () => {
                 </div>
                 <div className={styles.timelineItem}>
                     <h2 className={styles.timelineItemTitle}>Work Experience</h2>
+                    <ShowAd />
                     <p className={styles.timelineItemDescription}>
                         In Senior year of college, joined KYEC internship plan, after that I worked another four months (became
                         full-time employee)
