@@ -1,0 +1,115 @@
+.timelineContainer {
+  padding: 20px;
+
+  .navMenu {
+    margin-bottom: 20px;
+  }
+
+  .navLink {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #eee;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: #666;
+ 
+    &:hover {
+      background: #333;
+    }
+  }
+
+  .timelineTitle {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .timelineItem {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    h2 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+      list-style-type: none;
+
+      li {
+        margin: 10px 0;
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+          content: "•";
+          color: #007bff;
+          font-weight: bold;
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+
+    h3 {
+      color: #007bff;
+      margin: 25px 0 15px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #eee;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #0056b3;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.socialLinksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.socialLink {
+  text-decoration: none;
+  margin-left: 10px;
+
+  &.linkedin {
+    color: #0077b5;
+  }
+
+  &.job104 {
+    color: #00a0e9;
+  }
+
+  &.youtube {
+    color: #ff0000;
+  }
+}
+
+.emphasis {
+  font-weight: bold;
+  color: #ff0000;
+} 

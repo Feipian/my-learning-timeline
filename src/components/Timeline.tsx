@@ -1,38 +1,38 @@
 // my-timeline/src/components/LearningTimeLine.tsx
 import React from 'react';
-import styles from '../styles/Timeline.module.css'
-import { Link } from 'react-router-dom';
+import styles from './Timeline.module.scss'
+import Link from 'next/link';
 
 import { QRCodeSVG } from 'qrcode.react';
 
-const LearningTimeLine: React.FC = () => {
+const TimeLine: React.FC = () => {
 
 
     return (
-        <div>
+        <div className={styles.timelineContainer}>
             <div className={styles.navMenu}>
-                <Link translate='no' to="/video-info" className={styles.navLink}>{ "VideoInfo" }</Link>
-                <Link to="/channel" className={styles.navLink}>My Channel</Link>
+                <Link translate='no' href="/video-info" className={styles.navLink}>VideoInfo</Link>
+                <Link href="/channel" className={styles.navLink}>My Channel</Link>
             </div>
 
-            <h1 className="typing">My Learning Timeline</h1>
+            <h1 className={styles.timelineTitle}>My Learning Timeline</h1>
             <div className={styles.timeline}>
                 <div className={styles.timelineItem}>
-                    <h2>Kindergarten</h2>
-                    <p>A very wonderful period, carefree, play with other kids every day.</p>
+                    <h2 className={styles.timelineItemTitle}>Kindergarten</h2>
+                    <p className={styles.timelineItemDescription}>A very wonderful period, carefree, play with other kids every day.</p>
                 </div>
                 <div className={styles.timelineItem}>
-                    <h2>Primary school</h2>
-                    <p>
+                    <h2 className={styles.timelineItemTitle}>Primary school</h2>
+                    <p className={styles.timelineItemDescription}>
                         I was in the fourth or fifth grade when I first came across the game Minecraft.
                         At that time, I thought plugins and modules were very novel.
-                        Why can the game have so many changes just by downloading other people's Jar files?
+                        Why can the game have so many changes just by downloading other people&apos;s Jar files?
                         Maybe this is the reason why I have a strong interest in coding and gradually develop towards coding.
                     </p>
                 </div>
                 <div className={styles.timelineItem}>
-                    <h2>High school</h2>
-                    <p>
+                    <h2 className={styles.timelineItemTitle}>High school</h2>
+                    <p className={styles.timelineItemDescription}>
                         For develop Minecraft or Tower of Saviors plugins to join Kinmen Higher Vocational School
                         Information Technology department as Student. But my teacher is perfect about IOT, and I need
                         to take care about my score for my graduate, so I learning IOT field. Created an automatic vegetable
@@ -46,8 +46,8 @@ const LearningTimeLine: React.FC = () => {
                     </ul>
                 </div>
                 <div className={styles.timelineItem}>
-                    <h2>University</h2>
-                    <p>
+                    <h2 className={styles.timelineItemTitle}>University</h2>
+                    <p className={styles.timelineItemDescription}>
                         Quemoy University Computer Science and Information Engineering.
                         For continue learn about make game plugins but, for get great score in School,
                         I give up this plan.
@@ -56,15 +56,15 @@ const LearningTimeLine: React.FC = () => {
                         <li>Skills learned: C++, C, Python, R, Artificial Intelligence, Tomcat, AWS, Ansible</li>
                         <li>Projects:</li>
                         <ul>
-                            <li>Crypto Currency Trading System (But I don't like Trading)</li>
+                            <li>Crypto Currency Trading System (But I don&apos;t like Trading)</li>
                             <li>Greedy Snake</li>
                             <li>E-Commerce Web Scraping</li>
                         </ul>
                     </ul>
                 </div>
                 <div className={styles.timelineItem}>
-                    <h2>Work Experience</h2>
-                    <p>
+                    <h2 className={styles.timelineItemTitle}>Work Experience</h2>
+                    <p className={styles.timelineItemDescription}>
                         In Senior year of college, joined KYEC internship plan, after that I worked another four months (became
                         full-time employee)
                     </p>
@@ -91,7 +91,7 @@ const LearningTimeLine: React.FC = () => {
                     </ul>
                 </div>
                 <div className={styles.timelineItem}>
-                    <h2>Self-Study Experience</h2>
+                    <h2 className={styles.timelineItemTitle}>Self-Study Experience</h2>
                     <ul>
                         <li translate='no'>Frontend: React, Next.js, Vue.js, Nuxt</li>
                         <li translate='no'>Backend: Express.js, Flask</li>
@@ -99,15 +99,15 @@ const LearningTimeLine: React.FC = () => {
                     </ul>
                 </div>
                 <div className={styles.timelineItem}>
-                    <h2>Project Experience</h2>
-                    <h3 translate='no'>Video Silence Cut</h3>
-                    <p translate='no'>Tech stack:</p>
+                    <h2 className={styles.timelineItemTitle}>Project Experience</h2>
+                    <h3 className={styles.timelineItemTitle}>Video Silence Cut</h3>
+                    <p className={styles.timelineItemDescription}>Tech stack:</p>
                     <ul>
-                        <li translate='no'>React</li>
-                        <li translate='no'>Next</li>
-                        <li translate='no'>Python</li>
-                        <li translate='no'>FFmpeg</li>
-                        <li translate='no'>Docker</li>
+                        <li className={styles.timelineItemDescription}>React</li>
+                        <li className={styles.timelineItemDescription}>Next</li>
+                        <li className={styles.timelineItemDescription}>Python</li>
+                        <li className={styles.timelineItemDescription}>FFmpeg</li>
+                        <li className={styles.timelineItemDescription}>Docker</li>
                     </ul>
                     <p>
                         GitHub:
@@ -117,28 +117,28 @@ const LearningTimeLine: React.FC = () => {
                         <QRCodeSVG value="https://github.com/Feipian/VideoSilenceCut" size={64} style={{ marginLeft: '10px' }} />
                     </p>
 
-                    <h3 translate='no'>ToDoWithMe</h3>
-                    <p translate='no'>Tech stack:</p>
+                    <h3 className={styles.timelineItemTitle}>ToDoWithMe</h3>
+                    <p className={styles.timelineItemDescription}>Tech stack:</p>
                     <ul>
-                        <li translate='no'>TypeScript</li>
-                        <li translate='no'>React Native</li>
-                        <li translate='no'>Expo</li>
-                        <li translate='no'>Firebase Auth</li>
+                        <li className={styles.timelineItemDescription}>TypeScript</li>
+                        <li className={styles.timelineItemDescription}>React Native</li>
+                        <li className={styles.timelineItemDescription}>Expo</li>
+                        <li className={styles.timelineItemDescription}>Firebase Auth</li>
                     </ul>
-                    <p>GitHub: 
+                    <p className={styles.timelineItemDescription}>GitHub: 
                         <QRCodeSVG value={"https://github.com/Feipian/Todo" }size={64} style={{ marginLeft: '10px' }}></QRCodeSVG>
                     </p>
                     <p className={styles.emphasis}>This project is currently being uploaded to the Play Store.</p>
 
-                    <h3 translate='no'>AWS Notes</h3>
-                    <p>University DevOps course notes:</p>
-                    <p>GitHub: 
+                    <h3 className={styles.timelineItemTitle}>AWS Notes</h3>
+                    <p className={styles.timelineItemDescription}>University DevOps course notes:</p>
+                    <p className={styles.timelineItemDescription}>GitHub: 
                     <QRCodeSVG value={"https://github.com/Feipian/Note-AWS/tree/main/aws" }size={64} style={{ marginLeft: '10px' }}></QRCodeSVG>
 
                     </p>
                 </div>
                 <div className={styles.timelineItem}>
-                    <h2>Personal Information</h2>
+                    <h2 className={styles.timelineItemTitle}>Personal Information</h2>
                     <div className={styles.socialLinksContainer}>
                         <div>
                             <strong>LinkedIn:</strong>
@@ -181,4 +181,4 @@ const LearningTimeLine: React.FC = () => {
     );
 };
 
-export default LearningTimeLine;
+export default TimeLine;

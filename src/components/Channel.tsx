@@ -1,7 +1,6 @@
 import React from 'react';
-import styles from '../styles/Channel.module.css';
+import styles from './Channel.module.scss';
 import AdsComponent from './AdSenseAd';
-import { Adsense } from '@ctrl/react-adsense';
 
 const Channel: React.FC = () => {
     return (

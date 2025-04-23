@@ -1,13 +1,16 @@
 // my-timeline/src/components/VideoInfo.tsx
 import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
-import styles from '../styles/VideoInfo.module.css';
-import { useNavigate, useParams } from 'react-router-dom';
+import styles from './VideoInfo.module.scss';
+import { useRouter } from 'next/router';
 
-const VideoInfo: React.FC = () => {
+interface VideoInfoProps {
+    articleId: string;
+}
+
+const VideoInfo: React.FC<VideoInfoProps> = ({ articleId }) => {
     const [content, setContent] = useState<string | null>(null);
-    const navigate = useNavigate();
-    const { articleId } = useParams();
+    const router = useRouter();
 
     useEffect(() => {
         const fetchArticle = async () => {
@@ -29,7 +32,7 @@ const VideoInfo: React.FC = () => {
 
     return (
         <div className={styles.container}>
-            <button onClick={() => navigate(-1)} className={styles.backButton}>
+            <button onClick={() => router.back()} className={styles.backButton}>
                 Go Back
             </button>
             <div className={styles.markdownContent}>
